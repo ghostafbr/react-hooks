@@ -1,5 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client'; // import { CounterWithCustomHook } from './01-UseState/CounterWithCustomHook';
+import {
+  BrowserRouter,
+  createBrowserRouter,
+  RouterProvider,
+} from 'react-router-dom';
 // import { CounterApp } from './01-UseState/CounterApp';
 // import { HooksApp } from './HooksApp';
 // import { SimpleForm } from './02-useEffect/SimpleForm';
@@ -12,8 +17,13 @@ import ReactDOM from 'react-dom/client'; // import { CounterWithCustomHook } fro
 // import { CallbackHook } from './06-memos/CallbackHook';
 // import { Padre } from './07-tarea-memo/Padre';
 // import './08-useReducer/intro-reducer';
-import { TodoApp } from './08-useReducer/TodoApp';
+// import { TodoApp } from './08-useReducer/TodoApp';
+import { MainApp } from './09-useContext/MainApp';
 
 import './index.css';
 
-ReactDOM.createRoot(document.getElementById('root')).render(<TodoApp />);
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <BrowserRouter>
+    <MainApp />
+  </BrowserRouter>
+);
