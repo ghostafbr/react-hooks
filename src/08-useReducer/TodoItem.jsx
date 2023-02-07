@@ -6,6 +6,7 @@ export const TodoItem = ({ todo, onRemovingTodo, onToggleTodo }) => {
         className='list-group-item d-flex justify-content-between'
       >
         <span
+          aria-label='span'
           className={`align-self-center ${
             todo.done ? 'text-decoration-line-through' : ''
           }`}
